@@ -1,0 +1,6 @@
+C:\Users\thiago.mattos\Desktop\Highscore\Highscore\bin\Debug\Highscore.exe.config
+C:\Users\thiago.mattos\Desktop\Highscore\Highscore\bin\Debug\Highscore.exe
+C:\Users\thiago.mattos\Desktop\Highscore\Highscore\bin\Debug\Highscore.pdb
+C:\Users\thiago.mattos\Desktop\Highscore\Highscore\obj\Debug\Highscore.csprojResolveAssemblyReference.cache
+C:\Users\thiago.mattos\Desktop\Highscore\Highscore\obj\Debug\Highscore.exe
+C:\Users\thiago.mattos\Desktop\Highscore\Highscore\obj\Debug\Highscore.pdb
