@@ -12,12 +12,15 @@ namespace Highscore
         {
             #region variables
             bool active = true;
+            bool loading = false;
             string[] names = new string[10] { "paul", "potato", "edgard", "thor", "freya", "ragnar", "loki", "bjorn", "fenir", "odin" };
             int[] highscore = new int[10] { 20, 10, 30, 40, 60, 70, 90, 50, 80, 100 };
             int newscore;
             int lastscoreposition = highscore.Length - 1;
             int lastnameposition = names.Length - 1;
             int numberplayer = 1;
+            int loadingtime = 0;
+            int loadinganimation = 200;
             #endregion
             while (active)
             {
@@ -49,6 +52,7 @@ namespace Highscore
                     Console.ForegroundColor = ConsoleColor.Gray;
                 }
                 #endregion
+
                 #region New scores
                 Console.WriteLine("Digite seu nome");
 
@@ -70,9 +74,45 @@ namespace Highscore
 
                 if (newscore <= highscore[lastscoreposition])
                 {
+                    loading = true;
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    while (loading)
+                    {
+                        Console.WriteLine("Atualizando Highscore");
+                        //Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+                        System.Threading.Thread.Sleep(loadinganimation);
+                        Console.Clear();
+                        loadingtime++;
+
+                        Console.WriteLine("Atualizando Highscore.");
+                        //Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+                        System.Threading.Thread.Sleep(loadinganimation);
+                        Console.Clear();
+                        loadingtime++;
+
+                        Console.WriteLine("Atualizando Highscore..");
+                        //Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+                        System.Threading.Thread.Sleep(loadinganimation);
+                        Console.Clear();
+                        loadingtime++;
+
+                        Console.WriteLine("Atualizando Highscore...");
+                        //Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+                        System.Threading.Thread.Sleep(loadinganimation);
+                        Console.Clear();
+                        loadingtime++;
+
+                        if (loadingtime == 12)
+                        {
+                            loading = false;
+                            loadingtime = 0;
+                        }
+                    }
+                    Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine(newscore + " " + highscore[9]);
                     Console.WriteLine("Sua pontuação é muito baixa");
+                    System.Threading.Thread.Sleep(2000);
+                    Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Gray;
                 }
 
@@ -80,9 +120,44 @@ namespace Highscore
                 {
                     highscore[lastscoreposition] = newscore;
                     names[lastnameposition] = newname;
+                    Console.Clear();
+                    loading = true;
+                    //-------------------------------------------------------------
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    Console.WriteLine("Highscore atualizado");
+                    while (loading)
+                    {
+                        Console.WriteLine("Atualizando Highscore");
+                        //Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+                        System.Threading.Thread.Sleep(loadinganimation);
+                        Console.Clear();
+                        loadingtime++;
+
+                        Console.WriteLine("Atualizando Highscore.");
+                        //Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+                        System.Threading.Thread.Sleep(loadinganimation);
+                        Console.Clear();
+                        loadingtime++;
+
+                        Console.WriteLine("Atualizando Highscore..");
+                        //Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+                        System.Threading.Thread.Sleep(loadinganimation);
+                        Console.Clear();
+                        loadingtime++;
+
+                        Console.WriteLine("Atualizando Highscore...");
+                        //Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+                        System.Threading.Thread.Sleep(loadinganimation);
+                        Console.Clear();
+                        loadingtime++;
+
+                        if(loadingtime == 12)
+                        {
+                            loading = false;
+                            loadingtime = 0;
+                        }
+                    }
                     Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.Clear();
                 }
                 #endregion
             }
