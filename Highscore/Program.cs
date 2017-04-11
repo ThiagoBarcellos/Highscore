@@ -48,7 +48,9 @@ namespace Highscore
 
                     }
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
-                    Console.WriteLine(names[i] + " " + highscore[i]);
+                    Console.WriteLine("Nome: " + names[i] + "  ||   " + "Pontos: " + highscore[i]);
+                    Console.WriteLine("-------------------------------------------------");
+                    //Console.WriteLine((names[i] + " " + highscore[i]).PadLeft(Console.WindowWidth /2 - (names[i] + " " + highscore[i]).Length / 2));
                     Console.ForegroundColor = ConsoleColor.Gray;
                 }
                 #endregion
@@ -79,25 +81,21 @@ namespace Highscore
                     while (loading)
                     {
                         Console.WriteLine("Atualizando Highscore");
-                        //Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
                         System.Threading.Thread.Sleep(loadinganimation);
                         Console.Clear();
                         loadingtime++;
 
                         Console.WriteLine("Atualizando Highscore.");
-                        //Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
                         System.Threading.Thread.Sleep(loadinganimation);
                         Console.Clear();
                         loadingtime++;
 
                         Console.WriteLine("Atualizando Highscore..");
-                        //Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
                         System.Threading.Thread.Sleep(loadinganimation);
                         Console.Clear();
                         loadingtime++;
 
                         Console.WriteLine("Atualizando Highscore...");
-                        //Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
                         System.Threading.Thread.Sleep(loadinganimation);
                         Console.Clear();
                         loadingtime++;
@@ -122,30 +120,26 @@ namespace Highscore
                     names[lastnameposition] = newname;
                     Console.Clear();
                     loading = true;
-                    //-------------------------------------------------------------
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
+
                     while (loading)
                     {
                         Console.WriteLine("Atualizando Highscore");
-                        //Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
                         System.Threading.Thread.Sleep(loadinganimation);
                         Console.Clear();
                         loadingtime++;
 
                         Console.WriteLine("Atualizando Highscore.");
-                        //Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
                         System.Threading.Thread.Sleep(loadinganimation);
                         Console.Clear();
                         loadingtime++;
 
                         Console.WriteLine("Atualizando Highscore..");
-                        //Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
                         System.Threading.Thread.Sleep(loadinganimation);
                         Console.Clear();
                         loadingtime++;
 
                         Console.WriteLine("Atualizando Highscore...");
-                        //Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
                         System.Threading.Thread.Sleep(loadinganimation);
                         Console.Clear();
                         loadingtime++;
